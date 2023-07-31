@@ -59,16 +59,16 @@ This api has just 4 endpoints
 - How you approach the usage of external API's
 - How you test the correctness of your solution
 
-### Solution explanation
-
-1. Completed tasks : 1,2 and 3
-2. Task 4 : We can use a checkbox to select the users and allow delete a bulk of users using already implemented delete user feature
-
-   # Test External API
-   - Use the swagger interface to test and get the responses
+### Restrictions
 
 - Please do not modify the External API project
 - Besides it changing/adding everything is allowed, feel free to add new projects, libraries etc. - everything what you consider as useful
 - If there is something that you want us to notice in your approach please add a text file describing it or do it on the PR request
 
-### Restrictions
+## Solution explanation
+
+1. Completed tasks : 1,2 and 3
+2. Task 4 : We can use a checkbox to select the users and allow delete a bulk of users using already implemented delete user feature
+
+## Test External API
+   - Use the swagger interface to test and get the responses
