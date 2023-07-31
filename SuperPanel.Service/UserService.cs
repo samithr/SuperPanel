@@ -33,7 +33,7 @@ namespace SuperPanel.Service
         {
             try
             {
-                var recordsPerPage = Convert.ToInt32(_configuration["RecordsPerPage"] ?? "12");
+                var recordsPerPage = Convert.ToInt32(_configuration["RecordsPerPage"] ?? "10");
                 return await _userRepository.QueryAll(pageNumber, recordsPerPage);
             }
             catch (Exception ex)
