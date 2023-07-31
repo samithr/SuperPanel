@@ -4,4 +4,14 @@ SuperPanel.App/bin/
 SuperPanel.App/obj/
 SuperPanel.Tests/bin/
 SuperPanel.Tests/obj/
+SuperPanel.DAL/bin/
+SuperPanel.DAL/obj/
+SuperPanel.Dto/bin/
+SuperPanel.Dto/obj/
+SuperPanel.Infrastructure/bin/
+SuperPanel.Infrastructure/obj/
+SuperPanel.Repository/bin/
+SuperPanel.Repository/obj/
+SuperPanel.Service/bin/
+SuperPanel.Service/obj/
 .vs/
