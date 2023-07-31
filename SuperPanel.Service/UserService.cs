@@ -51,7 +51,7 @@ namespace SuperPanel.Service
                 if (userId > 0)
                 {
                     var user = await _externalApiService.FindById(userId);
-                    if (!user.IsError && string.IsNullOrEmpty(user.Data))
+                    if (!user.IsError && !string.IsNullOrEmpty(user.Data))
                     {
                         var anomalized = await _externalApiService.AnomalizeUser(userId);
                         if (!anomalized.IsError && !string.IsNullOrEmpty(anomalized.Data))
