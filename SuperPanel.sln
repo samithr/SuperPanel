@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.App", "SuperPanel.App\SuperPanel.App.csproj", "{A96C11E0-894C-4DD6-819C-5F112468335E}"
 EndProject
@@ -10,7 +10,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalContacts.Api", "Ext
 		{A96C11E0-894C-4DD6-819C-5F112468335E} = {A96C11E0-894C-4DD6-819C-5F112468335E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPanel.Tests", "SuperPanel.Tests\SuperPanel.Tests.csproj", "{845C00DF-3418-4566-8F17-1E3D917E6866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.Tests", "SuperPanel.Tests\SuperPanel.Tests.csproj", "{845C00DF-3418-4566-8F17-1E3D917E6866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.Service", "SuperPanel.Service\SuperPanel.Service.csproj", "{EF0885F1-D5EA-49C2-9F48-DBE0D2B0378D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.Repository", "SuperPanel.Repository\SuperPanel.Repository.csproj", "{567971F0-403B-4550-A58D-FB145FF278F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.DAL", "SuperPanel.DAL\SuperPanel.DAL.csproj", "{E2D02707-2853-4528-A07E-474DE549EA04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPanel.Dto", "SuperPanel.Dto\SuperPanel.Dto.csproj", "{2A8A99C3-7BBB-420E-818A-4A4A76758383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPanel.Infrastructure", "SuperPanel.Infrastructure\SuperPanel.Infrastructure.csproj", "{D7442E3B-520C-4A3C-B1A5-685454CB4A9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +40,26 @@ Global
 		{845C00DF-3418-4566-8F17-1E3D917E6866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845C00DF-3418-4566-8F17-1E3D917E6866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845C00DF-3418-4566-8F17-1E3D917E6866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0885F1-D5EA-49C2-9F48-DBE0D2B0378D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0885F1-D5EA-49C2-9F48-DBE0D2B0378D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0885F1-D5EA-49C2-9F48-DBE0D2B0378D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0885F1-D5EA-49C2-9F48-DBE0D2B0378D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567971F0-403B-4550-A58D-FB145FF278F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567971F0-403B-4550-A58D-FB145FF278F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567971F0-403B-4550-A58D-FB145FF278F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567971F0-403B-4550-A58D-FB145FF278F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D02707-2853-4528-A07E-474DE549EA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D02707-2853-4528-A07E-474DE549EA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D02707-2853-4528-A07E-474DE549EA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D02707-2853-4528-A07E-474DE549EA04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8A99C3-7BBB-420E-818A-4A4A76758383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8A99C3-7BBB-420E-818A-4A4A76758383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8A99C3-7BBB-420E-818A-4A4A76758383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8A99C3-7BBB-420E-818A-4A4A76758383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7442E3B-520C-4A3C-B1A5-685454CB4A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7442E3B-520C-4A3C-B1A5-685454CB4A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7442E3B-520C-4A3C-B1A5-685454CB4A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7442E3B-520C-4A3C-B1A5-685454CB4A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

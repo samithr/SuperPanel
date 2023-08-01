@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,12 @@
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="33.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuperPanel.Dto\SuperPanel.Dto.csproj" />
+    <ProjectReference Include="..\SuperPanel.Service\SuperPanel.Service.csproj" />
   </ItemGroup>
 
 </Project>

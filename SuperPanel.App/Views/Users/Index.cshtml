@@ -1,27 +1,83 @@
-﻿@model IEnumerable<User>
+﻿@using SuperPanel.Dto.EntityDto;
+@using SuperPanel.Dto.Pagination;
+
+@model PaginationResponse<UserDto>
 
 @{
     ViewData["Title"] = "User's list";
 }
 
+@if (TempData["deleteError"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Error occured: </strong> @TempData["deleteError"] !
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
 
 <table class="table">
 
     <thead>
         <tr>
+            <th><input class="btn" type="checkbox" id="selectAll"/>Select</th>
             <th>#</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Created at</th>
+            <th>@Html.DisplayNameFor(model => model.Data.FirstOrDefault().Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Data.FirstOrDefault().CreatedAt)</th>
+            <th></th>
         </tr>
     </thead>
-    @foreach (var u in Model)
+    @foreach (var u in Model.Data)
     {
         <tr>
+            <td><input class="btn" type="checkbox"/></td>
             <td>@u.Id</td>
             <td>@u.FirstName @u.LastName</td>
             <td>@u.Email</td>
             <td>@u.CreatedAt</td>
+            <td><a class="btn btn-danger" href="@Url.Action("Delete", "Users", new { page = Model.CurrentPage, userId = u.Id })">Delete</a></td>
         </tr>
     }
 </table>
+
+@{
+    var previousDisabled = Model.CurrentPage == 1 ? "disabled" : "";
+    var nextDisabled = !Model.IsLastPage ? "disabled" : "";
+}
+<div class="row">
+    <div>
+        <a asp-action="Index"
+           asp-route-page="@(Model.CurrentPage - 1)"
+           class="btn @previousDisabled">
+            Previous
+        </a>
+    </div>
+    <div>
+        <span class="alert-light"> |</span>
+    </div>
+    <div>
+        <a asp-action="Index"
+           asp-route-page="@(Model.CurrentPage + 1)"
+           class="btn @nextDisabled">
+            Next
+        </a>
+    </div>
+    <div>
+        <span class="alert-light"> |</span>
+    </div>
+    <div class="align-middle">
+        <span class="alert-light">Current Page : @Model.CurrentPage</span>
+    </div>
+    <div>
+        <span class="alert-light"> |</span>
+    </div>
+    <div class="align-middle">
+        <span class="alert-light">Total Pages : @Model.TotalPage</span>
+    </div>
+
+    <div class="align-middle">
+        <button class="btn btn-outline-warning" onclick="deleteSelected()">Delete Selected Items</button>
+    </div>
+</div>

@@ -4,9 +4,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SuperPanel.App.Data;
-using SuperPanel.App.Infrastructure;
 using SuperPanel.App.Models;
+using SuperPanel.Infrastructure;
+using SuperPanel.Repository;
+using SuperPanel.Repository.Interfaces;
+using SuperPanel.Repository.Shared;
+using SuperPanel.Service;
+using SuperPanel.Service.Interfaces;
 using System;
 using System.Linq;
 using System.Text.Json;
@@ -32,8 +36,19 @@ namespace SuperPanel.App
             services.AddOptions();
             services.Configure<DataOptions>(options => Configuration.GetSection("Data").Bind(options));
 
-            // Data
-            services.AddSingleton<IUserRepository, UserRepository>();
+
+            #region Common Configurations
+            services.AddSingleton<IEntityMapper, EntityMapper>();
+            #endregion
+
+            #region Repository
+            services.AddScoped<IUserRepository, UserRepository>();
+            #endregion
+
+            #region Services
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IExternalApiService, ExternalApiAccessService>();
+            #endregion
         }
 
 

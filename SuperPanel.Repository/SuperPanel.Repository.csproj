@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SuperPanel.DAL\SuperPanel.DAL.csproj" />
+    <ProjectReference Include="..\SuperPanel.Dto\SuperPanel.Dto.csproj" />
+    <ProjectReference Include="..\SuperPanel.Infrastructure\SuperPanel.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
